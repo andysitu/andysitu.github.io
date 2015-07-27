@@ -1,0 +1,14 @@
+body { 	background: white;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 150%;
+		margin-left: 70px; }
+
+li, ul {	display:block; }
+
+a:link, a:visited 
+	{ 	display: block;
+		font-weight: bold;
+		color:; #827f7d; }
+
+a:hover, a:active 
+	{	color: #2d2e2f; }

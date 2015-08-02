@@ -1,6 +1,3 @@
 [submodule "pages/textBox"]
 	path = pages/textBox
 	url = https://github.com/rarafon/textBox.git
-[submodule "Pages/2dworld"]
-	path = Pages/2dworld
-	url = https://github.com/rarafon/2dworld.git

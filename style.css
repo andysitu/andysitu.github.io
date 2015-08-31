@@ -1,7 +1,10 @@
-body { 	background: white;
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		font-size: 150%;
-		margin-left: 70px; }
+body { 	
+	background: no-repeat center center;
+	background-size: 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 150%;
+	margin-left: 70px; 
+}
 
 li, ul {	display:block; }
 

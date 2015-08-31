@@ -3,8 +3,12 @@ window.onload = function() {
 
 	links.addEventListener("mouseover", function(e) {
 		if (e.target.id in linkMap) {
-			console.log(e.target);
+			document.body.style.backgroundImage = 'url(images/test.png)'
 		}
+	});
+
+	links.addEventListener("mouseout", function(e) {
+		console.log(e.target);
 	});
 
 	var linkMap = {

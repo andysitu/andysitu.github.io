@@ -2,17 +2,18 @@ window.onload = function() {
 	var links = document.getElementById("links");
 
 	links.addEventListener("mouseover", function(e) {
-		if (e.target.id in linkMap) {
+		if (e.target.id in picMap) {
 			var divcontain = document.getElementById("img-container");
-			divcontain.style.backgroundImage = 'url(images/test.png)'
+			divcontain.style.backgroundImage = 'url(images/test.png)';
 		}
 	});
 
 	links.addEventListener("mouseout", function(e) {
-		console.log(e.target);
+		var divcontain = document.getElementById("img-container");
+			divcontain.style.backgroundImage = '';
 	});
 
-	var linkMap = {
+	var picMap = {
 		loancal_a: true,
 		ping_a: true,
 		movimg_a: true,

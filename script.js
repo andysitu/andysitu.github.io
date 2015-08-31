@@ -3,8 +3,9 @@ window.onload = function() {
 
 	links.addEventListener("mouseover", function(e) {
 		if (e.target.id in picMap) {
-			var divcontain = document.getElementById("img-container");
-			divcontain.style.backgroundImage = 'url(images/test.png)';
+			var key = e.target.id,
+				divcontain = document.getElementById("img-container");
+			divcontain.style.backgroundImage = 'url(images/' + picMap[key] + ')';
 		}
 	});
 
@@ -14,18 +15,17 @@ window.onload = function() {
 	});
 
 	var picMap = {
-		loancal_a: true,
-		ping_a: true,
-		movimg_a: true,
-		bricksf_a: true,
-		tabf_b: true,
-		tabf_a: true,
-		twod_c: true,
-		twod_b: true,
-		twod_a: true,
-		text_a: true,
-		arrr: true,
-		blur: true,
-		bs: true
+		twod_c: "",
+		twod_b: "twod_b.png",
+		twod_a: "twod_a.png",
+		loancal_a: "loancal_a.png",
+		ping_a: "ping_a.png",
+		movimg_a: "movimg_a.png",
+		bricksf_a: "bricksf_a.png",
+		tabf_b: "tabf_b.png",
+		tabf_a: "tabf_a.png",
+		text_a: "text_a.png",
+		arrr: "arrr.png",
+		bs: "bs.png"
 	}
 };

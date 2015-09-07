@@ -55,13 +55,10 @@ nav > ul > li > a {
 }
 
 nav li > ul li {
-	display: block;
-}
-
-nav li > ul li a {
+	background-color: gray;
 	color: #111;
 	display: block;
-	padding: 0.5em 2em;
+	padding: 0.5em 0.5em;
     text-decoration: none;
 }
 

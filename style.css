@@ -1,9 +1,9 @@
-body { 	
+body {
+	margin: 0;
 	background: no-repeat center center;
 	background-size: 100%;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 150%;
-	margin-left: 70px; 
+	font-size: 125%;
 }
 
 #img-container {
@@ -42,11 +42,38 @@ nav ul li {
 	list-style-type: none;
 }
 
+nav ul li:nth-child(1) {
+	margin-left: 10px
+}
+
 nav > ul > li > a {
 	color: #aaa;
-	background-color: #FF0;
+	background-color: #333;
 	display: block;
-	line-height: 2em;
 	padding: 0.5em 0.5em;
 	text-decoration: none;
+}
+
+nav li > ul li {
+	display: block;
+}
+
+nav li > ul li a {
+	color: #111;
+	display: block;
+	padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+nav li:hover {
+	background-color: #666;
+}
+
+nav li:hover > ul {
+	position: absolute;
+	display: block;
+}
+
+nav ul ul {
+	display: none;
 }

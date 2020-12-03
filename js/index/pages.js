@@ -21,33 +21,18 @@ var Orbit = function (_React$Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Orbit.__proto__ || Object.getPrototypeOf(Orbit)).call.apply(_ref, [this].concat(args))), _this), _this.create_sides = function () {
-      var li_class = "";
+      var div_class = "";
       return _this.props.slides.map(function (slide, index) {
-        li_class = index == 0 ? "is-active orbit-slide" : "orbit-slide";
+        div_class = index == 0 ? "carousel-item active" : "carousel-item";
         return React.createElement(
-          "li",
-          { className: li_class },
-          React.createElement(
-            "figure",
-            { className: "orbit-figure" },
-            React.createElement("img", { className: "orbit-image", src: slide.img_src }),
-            React.createElement(
-              "figcaption",
-              { className: "orbit-caption" },
-              slide.caption
-            )
-          )
+          "div",
+          { className: div_class },
+          React.createElement("img", { className: "w-100 d-block", src: slide.img_src })
         );
       });
-    }, _this.create_bullets = function () {
+    }, _this.create_indicators = function () {
       return _this.props.slides.map(function (slide, index) {
-        if (index != 0) {
-          return React.createElement(
-            "button",
-            { "data-slide": index },
-            React.createElement("span", { className: "show-for-sr" })
-          );
-        }
+        if (index == 0) return React.createElement("li", { "data-target": "#page-carousel", "data-slide-to": String(index), className: "active" });else return React.createElement("li", { "data-target": "#page-carousel", "data-slide-to": String(index) });
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -57,58 +42,36 @@ var Orbit = function (_React$Component) {
     value: function render() {
       return React.createElement(
         "div",
-        { className: "orbit", role: "region", "aria-label": "Web Page Pictures", "data-orbit": true },
+        { className: "carousel slide", "data-ride": "carousel", id: "page-carousel" },
+        React.createElement(
+          "ol",
+          { className: "carousel-indicators" },
+          this.create_indicators()
+        ),
         React.createElement(
           "div",
-          { className: "orbit-wrapper" },
+          { className: "carousel-inner" },
+          this.create_sides()
+        ),
+        React.createElement(
+          "a",
+          { "class": "carousel-control-prev", href: "#page-carousel", role: "button", "data-slide": "prev" },
+          React.createElement("span", { "class": "carousel-control-prev-icon", "aria-hidden": "true" }),
           React.createElement(
-            "div",
-            { className: "orbit-controls" },
-            React.createElement(
-              "button",
-              { className: "orbit-previous" },
-              React.createElement(
-                "span",
-                { className: "show-for-sr" },
-                "Previous Slide"
-              ),
-              "\u25C0\uFE0E"
-            ),
-            React.createElement(
-              "button",
-              { className: "orbit-next" },
-              React.createElement(
-                "span",
-                { className: "show-for-sr" },
-                "Next Slide"
-              ),
-              "\u25B6\uFE0E"
-            )
-          ),
-          React.createElement(
-            "ul",
-            { className: "orbit-container" },
-            this.create_sides()
+            "span",
+            { "class": "sr-only" },
+            "Previous"
           )
         ),
         React.createElement(
-          "nav",
-          { className: "orbit-bullets" },
+          "a",
+          { "class": "carousel-control-next", href: "#page-carousel", role: "button", "data-slide": "next" },
+          React.createElement("span", { "class": "carousel-control-next-icon", "aria-hidden": "true" }),
           React.createElement(
-            "button",
-            { className: "is-active", "data-slide": "0" },
-            React.createElement(
-              "span",
-              { className: "show-for-sr" },
-              "First slide details."
-            ),
-            React.createElement(
-              "span",
-              { className: "show-for-sr", "data-slide-active-label": true },
-              "Current Slide"
-            )
-          ),
-          this.create_bullets()
+            "span",
+            { "class": "sr-only" },
+            "Next"
+          )
         )
       );
     }
@@ -126,7 +89,7 @@ var Calendar_A = function (_React$Component2) {
     var _this2 = _possibleConstructorReturn(this, (Calendar_A.__proto__ || Object.getPrototypeOf(Calendar_A)).call(this, props));
 
     _this2.state = {
-      slides: [{ img_src: "images/cal_a_1.png", caption: "test" }, { img_src: "images/cal_a_1.png", caption: "test" }]
+      slides: [{ img_src: "images/cal_a_1.png", caption: "test" }]
     };
     return _this2;
   }

@@ -1,46 +1,42 @@
 class Orbit extends React.Component {
   create_sides = () => {
-    var li_class="";
+    var div_class="";
     return this.props.slides.map( (slide, index) => {
-      li_class = (index == 0) ? "is-active orbit-slide" : "orbit-slide"
+      div_class = (index == 0) ? "carousel-item active" : "carousel-item"
       return (
-        <li className={li_class}>
-          <figure className="orbit-figure">
-            <img className="orbit-image" src={slide.img_src} />
-            <figcaption className="orbit-caption">{slide.caption}</figcaption>
-          </figure>
-        </li>
+        <div className={div_class}>
+          <img className="w-100 d-block" src={slide.img_src} />
+        </div>
       );
     });
   }
 
-  create_bullets = () => {
+  create_indicators = () => {
     return this.props.slides.map((slide, index)=> {
-      if (index != 0) {
-        return (<button data-slide={index}><span className="show-for-sr"></span></button>);
-      }
+      if (index == 0)
+        return (<li data-target="#page-carousel" data-slide-to={String(index)} className="active"></li>)
+      else
+        return (<li data-target="#page-carousel" data-slide-to={String(index)}></li>)
     });
   }
 
   render() {
     return (
-      <div className="orbit" role="region" aria-label="Web Page Pictures" data-orbit>
-        <div className="orbit-wrapper">
-          <div className="orbit-controls">
-            <button className="orbit-previous"><span className="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-            <button className="orbit-next"><span className="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-          </div>
-          <ul className="orbit-container">
-            {this.create_sides()}
-          </ul>
+      <div className="carousel slide" data-ride="carousel" id="page-carousel">
+        <ol className="carousel-indicators">
+          {this.create_indicators()}
+        </ol>
+        <div className="carousel-inner">
+          {this.create_sides()}
         </div>
-        <nav className="orbit-bullets">
-          <button className="is-active" data-slide="0">
-            <span className="show-for-sr">First slide details.</span>
-            <span className="show-for-sr" data-slide-active-label>Current Slide</span>
-          </button>
-          { this.create_bullets() }
-        </nav>
+        <a class="carousel-control-prev" href="#page-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#page-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     );
   }
@@ -52,7 +48,6 @@ class Calendar_A extends React.Component {
     this.state = {
       slides: [
         {img_src: "images/cal_a_1.png", caption: "test"},
-        {img_src: "images/cal_a_1.png", caption: "test"}
       ]
     };
   }

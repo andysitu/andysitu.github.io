@@ -49,7 +49,7 @@ class LinksMenu extends React.Component {
 
 	render() {
 		return (
-			<div id="links-container" className="cell-large-6">
+			<div id="links-container" className="col-lg-4" style={this.props.menu_style}>
 					<ul id="links">
 						{this.state.links.map((linkArray) => {
 							return (
@@ -72,14 +72,19 @@ class App extends React.Component {
 		this.pagemenu = React.createRef();
 	}
 
+	calculate_page_height() {
+    return window.innerHeight - document.getElementById("top-nav-bar").offsetHeight;
+	}
+	
 	show_page = (e) => {
 		this.pagemenu.current.show_page(e.target.getAttribute("type_ref"));
 	}
 
 	render() {
-		return (<div className="grid-x grid-margin-x">
-			<LinksMenu ref={this.linksmenu} show_page={this.show_page} />	
-			<PageMenu  ref={this.pagemenu} />
+		var menu_style ={ height: this.calculate_page_height(), }
+		return (<div className="row">
+			<LinksMenu menu_style={menu_style} ref={this.linksmenu} show_page={this.show_page} />	
+			<PageMenu menu_style={menu_style} ref={this.pagemenu} />
 		</div>);
 	}
 }

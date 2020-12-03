@@ -16,7 +16,6 @@ var PageMenu = function (_React$Component) {
 
     _this.create_content = function () {
       if (_this.state.type == "calendar_a") {
-        console.log("show calendar");
         return React.createElement(Calendar_A, null);
       } else {
         return React.createElement(
@@ -43,7 +42,7 @@ var PageMenu = function (_React$Component) {
     value: function render() {
       return React.createElement(
         "div",
-        { id: "show-content-container", className: "cell large-6" },
+        { id: "show-content-container", className: "col-lg-8", style: this.props.menu_style },
         this.create_content()
       );
     }

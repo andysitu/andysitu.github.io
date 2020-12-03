@@ -55,7 +55,7 @@ var LinksMenu = function (_React$Component) {
 
 			return React.createElement(
 				"div",
-				{ id: "links-container", className: "cell-large-6" },
+				{ id: "links-container", className: "col-lg-4", style: this.props.menu_style },
 				React.createElement(
 					"ul",
 					{ id: "links" },
@@ -96,13 +96,19 @@ var App = function (_React$Component2) {
 	}
 
 	_createClass(App, [{
+		key: "calculate_page_height",
+		value: function calculate_page_height() {
+			return window.innerHeight - document.getElementById("top-nav-bar").offsetHeight;
+		}
+	}, {
 		key: "render",
 		value: function render() {
+			var menu_style = { height: this.calculate_page_height() };
 			return React.createElement(
 				"div",
-				{ className: "grid-x grid-margin-x" },
-				React.createElement(LinksMenu, { ref: this.linksmenu, show_page: this.show_page }),
-				React.createElement(PageMenu, { ref: this.pagemenu })
+				{ className: "row" },
+				React.createElement(LinksMenu, { menu_style: menu_style, ref: this.linksmenu, show_page: this.show_page }),
+				React.createElement(PageMenu, { menu_style: menu_style, ref: this.pagemenu })
 			);
 		}
 	}]);

@@ -16,8 +16,12 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
 } */
+#links-container,
+ #show-content-container {
+	 overflow: auto;
+}
 
-ul.orbit-container {
+.carousel-inner {
 	height: 400px;
 }
 
@@ -78,4 +82,3 @@ nav li:hover > ul {
 nav ul ul {
 	display: none;
 }
-

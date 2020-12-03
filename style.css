@@ -1,4 +1,4 @@
-body {
+/* body {
 	margin: 0;
 	background: no-repeat center center;
 	background-size: 100%;
@@ -15,6 +15,10 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+} */
+
+ul.orbit-container {
+	height: 400px;
 }
 
 li, ul {	display:block; }
@@ -48,7 +52,7 @@ nav ul li:nth-child(1) {
 
 nav > ul > li > a {
 	color: #aaa;
-	background-color: #333;
+	background-color: #333;	
 	display: block;
 	padding: 0.5em 0.5em;
 	text-decoration: none;
@@ -74,3 +78,4 @@ nav li:hover > ul {
 nav ul ul {
 	display: none;
 }
+

@@ -15,8 +15,12 @@ var PageMenu = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (PageMenu.__proto__ || Object.getPrototypeOf(PageMenu)).call(this, props));
 
     _this.create_content = function () {
-      if (_this.state.type == "calendar_a") {
-        return React.createElement(Calendar_A, null);
+      console.log(_this.state.type);
+      if (_this.state.type in page_content) {
+        return React.createElement(AppPage, {
+          slides: page_content[_this.state.type].slides,
+          text: page_content[_this.state.type].text
+        });
       } else {
         return React.createElement(
           "div",
@@ -27,7 +31,9 @@ var PageMenu = function (_React$Component) {
     };
 
     _this.state = {
-      type: ""
+      type: "",
+      slides: [],
+      body: []
     };
     return _this;
   }

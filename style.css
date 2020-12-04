@@ -1,28 +1,33 @@
-/* body {
-	margin: 0;
-	background: no-repeat center center;
-	background-size: 100%;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 125%;
+div#textContent-div {
+	font-size: 1rem;
 }
 
-#img-container {
-	position: fixed;
-	top: 10%;
-	right: 5%;
-	width: 50%;
-    height: 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-} */
+#links-container > h1 {
+	font-size: 2.0rem;
+}
+
+/* #body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}*/
+
 #links-container,
  #show-content-container {
 	 overflow: auto;
 }
 
-.carousel-inner {
+#links-container {
+	font-size: 1.5rem;
+}
+
+.page-carousel-images {
 	height: 400px;
+	width: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  outline: black;
+  border: 1px solid black;
 }
 
 li, ul {	display:block; }

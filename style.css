@@ -12,11 +12,21 @@ div#textContent-div {
 
 #links-container,
  #show-content-container {
-	 overflow: auto;
+	padding: 20px;
+	overflow: auto;
+}
+
+.carousel-inner img {
+	margin: auto;
 }
 
 #links-container {
 	font-size: 1.5rem;
+}
+
+#textcontent-container {
+	padding-top: 20px;
+	padding-right: 20px;
 }
 
 .page-carousel-images {

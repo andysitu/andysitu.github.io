@@ -37,7 +37,13 @@ var LinksMenu = function (_React$Component) {
 				React.createElement(
 					"h1",
 					null,
-					"Record"
+					"Record",
+					React.createElement(
+						"a",
+						{ href: "#", "data-toggle": "tooltip", "data-placement": "bottom",
+							title: "This is a record and reminder of what I have done as I like\n\t\t\t\t\t\t\ttrivialize everything that I have done and of how fun it is to make things." },
+						"[#?]"
+					)
 				),
 				React.createElement(
 					"ul",
@@ -101,6 +107,10 @@ var App = function (_React$Component2) {
 
 function loadReact() {
 	ReactDOM.render(React.createElement(App, { ref: this.app_page }), document.getElementById("apps-container"));
+	$(".carousel").carousel({ interval: 500 });
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
 }
 
 loadReact();

@@ -9,7 +9,7 @@ class ImgCarousel extends React.Component {
   change_slides(slides) {
     this.setState({
       slides: slides,
-    })
+    });
   }
 
   create_sides = () => {
@@ -24,8 +24,29 @@ class ImgCarousel extends React.Component {
 
   create_indicators = () => {
     return this.state.slides.map((slide, index)=> {
-      return (<li data-target="#page-carousel" data-slide-to={String(index)}></li>)
+      return (
+        <ol className="carousel-indicators">
+          <li data-target="#page-carousel" data-slide-to={String(index)}></li>
+        </ol>)
+
     });
+  }
+
+  create_next_buttons = () => {
+    if (this.state.slides && this.state.slides.length > 1) {
+      return (<div>
+        <a class="carousel-control-prev" href="#page-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#page-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>);
+    } else {
+      return (<div></div>)
+    }
   }
 
   render() {
@@ -35,20 +56,11 @@ class ImgCarousel extends React.Component {
     }
     return (
       <div className="carousel slide" data-ride="carousel" id="page-carousel">
-        <ol className="carousel-indicators">
-          {this.create_indicators()}
-        </ol>
+        {this.create_indicators()}
         <div className="carousel-inner">
           {this.create_sides()}
         </div>
-        <a class="carousel-control-prev" href="#page-carousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#page-carousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        {this.create_next_buttons()}
       </div>
     );
   }
@@ -69,12 +81,12 @@ class TextContent extends React.Component {
   }
 
   create_text() {
-    var title;
+    var heading;
     return this.state.text.map((textObj)=> {
-      // don't show title if it doesn't exist
-      title = (textObj.title) ? <h2>{textObj.title}</h2> : ""
+      // don't show heading if it doesn't exist
+      heading = (textObj.heading) ? <h2>{textObj.heading}</h2> : ""
       return (<div className="textContent-div">
-        {title}
+        {heading}
         {textObj.body.map((content) => {
           return (<p>{content}</p>);
         })}
@@ -83,7 +95,7 @@ class TextContent extends React.Component {
   }
 
   render() {
-    return (<div>
+    return (<div id="textcontent-container">
       {this.create_text()}
     </div>);
   }

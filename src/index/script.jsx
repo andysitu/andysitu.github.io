@@ -15,7 +15,10 @@ class LinksMenu extends React.Component {
 	render() {
 		return (
 			<div id="links-container" className="col-lg-4" style={this.props.menu_style}>
-				<h1>Record</h1>
+				<h1>Record 
+					<a  href="#" data-toggle="tooltip" data-placement="bottom"
+						title={`This is a record and reminder of what I have done as I like
+							trivialize everything that I have done and of how fun it is to make things.`}>[#?]</a></h1>
 				<ul id="links">
 					{this.state.links.map((linkArray) => {
 						return (
@@ -39,7 +42,8 @@ class App extends React.Component {
 	}
 
 	calculate_page_height() {
-    return window.innerHeight - document.getElementById("top-nav-bar").offsetHeight;
+		return window.innerHeight - document.getElementById("top-nav-bar").offsetHeight
+		;
 	}
 	
 	show_page = (e) => {
@@ -56,7 +60,11 @@ class App extends React.Component {
 }
 
 function loadReact() {
-  ReactDOM.render(<App ref={this.app_page} />, document.getElementById("apps-container"));
+	ReactDOM.render(<App ref={this.app_page} />, document.getElementById("apps-container"));
+	$(".carousel").carousel({interval: 500,});
+	$(function() {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
 }
 
 loadReact();

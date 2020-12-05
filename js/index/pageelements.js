@@ -26,8 +26,43 @@ var ImgCarousel = function (_React$Component) {
 
     _this.create_indicators = function () {
       return _this.state.slides.map(function (slide, index) {
-        return React.createElement("li", { "data-target": "#page-carousel", "data-slide-to": String(index) });
+        return React.createElement(
+          "ol",
+          { className: "carousel-indicators" },
+          React.createElement("li", { "data-target": "#page-carousel", "data-slide-to": String(index) })
+        );
       });
+    };
+
+    _this.create_next_buttons = function () {
+      if (_this.state.slides && _this.state.slides.length > 1) {
+        return React.createElement(
+          "div",
+          null,
+          React.createElement(
+            "a",
+            { "class": "carousel-control-prev", href: "#page-carousel", role: "button", "data-slide": "prev" },
+            React.createElement("span", { "class": "carousel-control-prev-icon", "aria-hidden": "true" }),
+            React.createElement(
+              "span",
+              { "class": "sr-only" },
+              "Previous"
+            )
+          ),
+          React.createElement(
+            "a",
+            { "class": "carousel-control-next", href: "#page-carousel", role: "button", "data-slide": "next" },
+            React.createElement("span", { "class": "carousel-control-next-icon", "aria-hidden": "true" }),
+            React.createElement(
+              "span",
+              { "class": "sr-only" },
+              "Next"
+            )
+          )
+        );
+      } else {
+        return React.createElement("div", null);
+      }
     };
 
     _this.state = {
@@ -53,36 +88,13 @@ var ImgCarousel = function (_React$Component) {
       return React.createElement(
         "div",
         { className: "carousel slide", "data-ride": "carousel", id: "page-carousel" },
-        React.createElement(
-          "ol",
-          { className: "carousel-indicators" },
-          this.create_indicators()
-        ),
+        this.create_indicators(),
         React.createElement(
           "div",
           { className: "carousel-inner" },
           this.create_sides()
         ),
-        React.createElement(
-          "a",
-          { "class": "carousel-control-prev", href: "#page-carousel", role: "button", "data-slide": "prev" },
-          React.createElement("span", { "class": "carousel-control-prev-icon", "aria-hidden": "true" }),
-          React.createElement(
-            "span",
-            { "class": "sr-only" },
-            "Previous"
-          )
-        ),
-        React.createElement(
-          "a",
-          { "class": "carousel-control-next", href: "#page-carousel", role: "button", "data-slide": "next" },
-          React.createElement("span", { "class": "carousel-control-next-icon", "aria-hidden": "true" }),
-          React.createElement(
-            "span",
-            { "class": "sr-only" },
-            "Next"
-          )
-        )
+        this.create_next_buttons()
       );
     }
   }]);
@@ -114,18 +126,18 @@ var TextContent = function (_React$Component2) {
   }, {
     key: "create_text",
     value: function create_text() {
-      var title;
+      var heading;
       return this.state.text.map(function (textObj) {
-        // don't show title if it doesn't exist
-        title = textObj.title ? React.createElement(
+        // don't show heading if it doesn't exist
+        heading = textObj.heading ? React.createElement(
           "h2",
           null,
-          textObj.title
+          textObj.heading
         ) : "";
         return React.createElement(
           "div",
           { className: "textContent-div" },
-          title,
+          heading,
           textObj.body.map(function (content) {
             return React.createElement(
               "p",
@@ -141,7 +153,7 @@ var TextContent = function (_React$Component2) {
     value: function render() {
       return React.createElement(
         "div",
-        null,
+        { id: "textcontent-container" },
         this.create_text()
       );
     }

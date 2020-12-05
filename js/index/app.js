@@ -76,6 +76,7 @@ var App = function (_React$Component2) {
 		var _this3 = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
 		_this3.show_page = function (e) {
+			e.preventDefault();
 			_this3.app_page.current.show_page(e.target.getAttribute("type_ref"));
 		};
 

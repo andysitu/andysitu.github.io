@@ -47,6 +47,7 @@ class App extends React.Component {
 	}
 	
 	show_page = (e) => {
+		e.preventDefault();
 		this.app_page.current.show_page(e.target.getAttribute("type_ref"));
 	}
 

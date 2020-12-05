@@ -131,7 +131,7 @@ var page_content = {
   },
   daily_mark_a: {
     linkText: "Daily Marker",
-    slides: [{ img_src: "images/daily_mark_a_1.bmp" }],
+    slides: [{ img_src: "images/daily_mark_a_1.png" }],
     text: [{ heading: "Daily Marker",
       body: ["My third attempt at a daily tally application. The previous one I used\n          Django and Python. This time, I rewrote that program with ASP.NET and C#\n          for the backend while using JavaScript to generate the HTML elements and make\n          the ajax calls to the server on the frontend. I can't recall what database\n          type I used. I think it was SQL Express that came with Visual Studio.", "My initial goal was to use C# to make a desktop application, but throughout\n          my research I questioned why I would spend so much effort to learn how to\n          learn WPF or WinForms when web development basicaly covered all of it in an\n          more familiar format for me."]
     }, { heading: "Links",

@@ -221,7 +221,7 @@ var page_content = {
   },
   daily_mark_a: {
     linkText: "Daily Marker",
-    slides: [{img_src: "images/daily_mark_a_1.bmp",}, ],
+    slides: [{img_src: "images/daily_mark_a_1.png",}, ],
     text: [
       {heading: "Daily Marker",
         body: [

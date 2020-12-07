@@ -356,18 +356,21 @@ var page_content = {
           had the package data from the UPS and FedEx websites that I could export into
           CSV files. The program divided this data by package weights and zip codes and
           then compared the values to each other and produce a file with the comparison
-          of these values.`,
+          of these values. It also compared by the type of packages and zip codes that
+          we shipped and then an estimate of what we were to pay with one carrier or
+          the other. The rates weren't flatout better in either direction across the
+          borad.`,
           `It sounds easy enough, but it took a heck of a time as you can see by the 
           commit history and I spent any free time that I had at work and even stayed
           overtime to work on this. A persistent problem was figuring how to decipher
           the data from the files and then the corner cases when there minute changes
           in the files.`,
           `These rates were used to begin the conversation with headquarters as we found
-          out for the first time that FedEx would be cheaper (for us that is. shipping
-          rates for each company depends on the contract that you sign with them which
-          depends heavily on your shipping volumen), and eventually the warehouses
-          in the North American region switched the majority of packages to be shipped
-          by FedEx.`,
+          out for the first time that FedEx would be cheaper for the type of packages
+          and volume that we did(for us that is. shipping rates for each company 
+          depends on the contract that you sign with them which depends heavily on your 
+          shipping volume), and eventually the warehouses in the North American region
+          switched the majority of packages to be shipped by FedEx.`,
         ]
     },{heading: "Links",
         body: [

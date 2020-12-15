@@ -185,6 +185,30 @@ var page_content = {
       ]},
     ],
   },
+  apigcp_a: {
+    linkText: "API with Google Cloud",
+    // slides: [{img_src: "images/webpage_a_1.png",}, ],
+    text: [
+      {heading: "API with Google Cloud", 
+        body: [
+          `API development using Express and Google Cloud for a course. It was a new and often
+          frustrating experience because I frequently saw errors using Google Cloud, namely the
+          App Engine, with nondescriptive messsages, and I had to guess whether the error was
+          due to the express code or due to the code that interacted with Google Cloud.`,
+          `The Postman code also took a long time as I frequently tried to test for anything that 
+          I could think of and frequently wrote too much code. In fact, I frequently ran into an
+          error when too many tests were being run at a given time. Finally, there was the API
+          documentation that we had to do for the REST API.`,
+          `It has taught me that the request methods and status codes are very important, 
+          and it has given me a new appreciation for REST APIs, where they act as a black box
+          with well defined paramters that allow for other applications to easily use.`
+        ]
+    },{heading: "Links",
+        body: [
+          <a href="https://github.com/rarafon/Javascript/tree/master/api_google_cloud" target="_blank">GitHub Repository URL</a>,
+      ]},
+    ],
+  },
   care_a: {
     linkText: "Tracking Volunteers",
     slides: [{img_src: "images/care_a/care_a_1.png",},

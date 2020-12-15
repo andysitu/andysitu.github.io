@@ -32,6 +32,35 @@ class AppPage extends React.Component {
 }
 
 var page_content = {
+  wmsserver_a: {
+    linkText: "WMS Server",
+    // slides: [{img_src: "images/webpage_a_1.png",}, ],
+    text: [
+      {heading: "WMS Server", 
+        body: [
+          `This is my attempt at a warehouse management system for a client. Initially, 
+          I attempted to use the Google App Engine with Spring Boot, but it proved 
+          difficult as I was running into errors on Google Cloud when running the app 
+          engine but I was fine when I was running locally or manually on Google Cloud 
+          using the ./mvnw spring-boot:run option there. Eventually I decided to use 
+          Google Compute Engine instead, and I believe that this is the correct 
+          choice.`,
+          `It's cheaper for one which is quite important and development is pretty 
+          straightforward as VM servers are much easier to run. The benefits of 
+          App Engine also lies in the ability to run multiple instances on demand, 
+          but the demand of a WMS is pretty static meaning that there is a definite 
+          maximum and minimum amount of users.`,
+          `It was a similar situation with Firestore or Firebase as well. Now I've 
+          reverted back to MongoDB where the database server is running alongside 
+          the web server. What this means is that development now revolves around 
+          Java and JavaScript for the backend and frontend.`
+        ]
+    },{heading: "Links",
+        body: [
+          <a href="https://github.com/rarafon/wms_server" target="_blank">GitHub Repository URL</a>,
+      ]},
+    ],
+  },
   webpage_a: {
     linkText: "This Webpage",
     slides: [{img_src: "images/webpage_a_1.png",}, ],

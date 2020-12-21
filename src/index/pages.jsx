@@ -221,11 +221,9 @@ var page_content = {
           MongoDB on the local end, using JS and jQuery, and Bootstrap. In production,
           it's running on AWS. We were in a team with independent responsibilities and
           this is what I wrote.`,
-          `There was a deadline, but I could have spent more time working things out. It's
-          also because I am quite negative about the things that I have done, but I have
-          inspected it a few times so far and it's pretty good. One thing that I need to
-          improve on is the asyncrhonous calls which is how all the data is  loaded; there
-          might be delays in some calls in unexpected ways that I didn't take into account.`
+          `One thing that I need to improve on is the asyncrhonous calls which is how all 
+          the data is  loaded; there might be delays in some calls in unexpected ways 
+          that I didn't take into account.`,
         ]
     },{heading: "Links",
         body: [

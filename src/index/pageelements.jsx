@@ -3,22 +3,44 @@ class ImgCarousel extends React.Component {
     super(props);
     this.state ={
       slides: this.props.slides,
+      active_index: 0,
+      slides_length: 0,
     }
   }
 
   change_slides(slides) {
-    this.setState({
-      slides: slides,
-    });
+    if (slides && slides.length > 0) {
+      this.setState({
+        slides: slides,
+        active_indx: 0,
+        slides_length: slides.length,
+      });
+    } else {
+      this.setState({
+        slides: [],
+        active_indx: 0,
+        slides_length: 0,
+      });
+    }
+    
   }
 
   create_sides = () => {
     return this.state.slides.map( (slide, index) => {
-      return (
-        <div className="carousel-item">
-          <img className="page-carousel-images d-block" src={slide.img_src} />
-        </div>
-      );
+      if (index != this.state.active_index) {
+        return (
+          <div className="carousel-item">
+            <img className="page-carousel-images d-block" src={slide.img_src} />
+          </div>
+        );
+      } else {
+        return (
+          <div className="carousel-item active">
+            <img className="page-carousel-images d-block" src={slide.img_src} />
+          </div>
+        );
+      }
+      
     });
   }
 
@@ -30,16 +52,35 @@ class ImgCarousel extends React.Component {
         </ol>)
 
     });
-  }
+  };
+
+  onClick_next = (e) => {
+    e.preventDefault();
+    let index = (this.state.active_index + 1 >= this.state.slides_length)
+          ? 0 : this.state.active_index + 1;
+    this.setState({
+      active_index: index,
+    });
+  };
+  onClick_prev = (e) => {
+    e.preventDefault();
+    let index = (this.state.active_index -1 > 0)
+          ? this.state.active_index -1 : 0;
+    this.setState({
+      active_index: index,
+    });
+  };
 
   create_next_buttons = () => {
     if (this.state.slides && this.state.slides.length > 1) {
       return (<div>
-        <a class="carousel-control-prev" href="#page-carousel" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#page-carousel" role="button" 
+          data-slide="prev" onClick={this.onClick_prev}>
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#page-carousel" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#page-carousel" role="button" 
+          data-slide="next" onClick={this.onClick_next}>
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>

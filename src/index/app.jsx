@@ -53,7 +53,7 @@ class App extends React.Component {
 
 	render() {
 		var menu_style ={ height: this.calculate_page_height(), }
-		return (<div className="row">
+		return (<div id="content-container">
 			<LinksMenu menu_style={menu_style} ref={this.linksmenu} show_page={this.show_page} />	
 			<AppPage menu_style={menu_style} ref={this.app_page} />
 		</div>);
@@ -61,8 +61,7 @@ class App extends React.Component {
 }
 
 function loadReact() {
-	ReactDOM.render(<App ref={this.app_page} />, document.getElementById("apps-container"));
-	$(".carousel").carousel({interval: 500,});
+	ReactDOM.render(<App ref={this.app_page} />, document.getElementById("content-wrapper"));
 	$(function() {
 		$('[data-toggle="tooltip"]').tooltip()
 	});

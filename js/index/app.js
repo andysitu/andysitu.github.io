@@ -96,7 +96,7 @@ var App = function (_React$Component2) {
 			var menu_style = { height: this.calculate_page_height() };
 			return React.createElement(
 				"div",
-				{ className: "row" },
+				{ id: "content-container" },
 				React.createElement(LinksMenu, { menu_style: menu_style, ref: this.linksmenu, show_page: this.show_page }),
 				React.createElement(AppPage, { menu_style: menu_style, ref: this.app_page })
 			);
@@ -107,8 +107,7 @@ var App = function (_React$Component2) {
 }(React.Component);
 
 function loadReact() {
-	ReactDOM.render(React.createElement(App, { ref: this.app_page }), document.getElementById("apps-container"));
-	$(".carousel").carousel({ interval: 500 });
+	ReactDOM.render(React.createElement(App, { ref: this.app_page }), document.getElementById("content-wrapper"));
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip();
 	});

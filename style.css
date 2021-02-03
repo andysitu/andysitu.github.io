@@ -1,3 +1,11 @@
+body {
+	margin: 0;
+}
+
+#content-container {
+	display: flex;
+}
+
 div#textContent-div {
 	font-size: 1rem;
 }
@@ -10,6 +18,14 @@ div#textContent-div {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }*/
 
+#links-container {
+	width: 30%;
+}
+
+#show-content-container {
+	width: 70%;
+}
+
 #links-container,
  #show-content-container {
 	padding: 20px;
@@ -18,6 +34,10 @@ div#textContent-div {
 
 .carousel-inner img {
 	margin: auto;
+}
+
+p {
+	margin-bottom: 5px;
 }
 
 #links-container {
@@ -42,12 +62,16 @@ div#textContent-div {
 
 li, ul {	display:block; }
 
-a:link, a:visited 
-	{ 	font-weight: bold;
-		color: #827f7d; }
+a:link, a:visited { 	
+	font-weight: bold;
+	color: #827f7d; 
+	text-decoration: none;
+}
 
-a:hover, a:active 
-	{	color: #2d2e2f; }
+a:hover, a:active {	
+	color: #2d2e2f; 
+	text-decoration: none;
+}
 
 nav {
 	background-color: #333;
@@ -96,4 +120,12 @@ nav li:hover > ul {
 
 nav ul ul {
 	display: none;
+}
+
+.carousel-item {
+	display: none;
+}
+
+.carousel-item.active {
+	display: block;
 }

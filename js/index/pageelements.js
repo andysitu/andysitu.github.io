@@ -16,11 +16,19 @@ var ImgCarousel = function (_React$Component) {
 
     _this.create_sides = function () {
       return _this.state.slides.map(function (slide, index) {
-        return React.createElement(
-          "div",
-          { className: "carousel-item" },
-          React.createElement("img", { className: "page-carousel-images d-block", src: slide.img_src })
-        );
+        if (index != _this.state.active_index) {
+          return React.createElement(
+            "div",
+            { className: "carousel-item" },
+            React.createElement("img", { className: "page-carousel-images d-block", src: slide.img_src })
+          );
+        } else {
+          return React.createElement(
+            "div",
+            { className: "carousel-item active" },
+            React.createElement("img", { className: "page-carousel-images d-block", src: slide.img_src })
+          );
+        }
       });
     };
 
@@ -34,6 +42,22 @@ var ImgCarousel = function (_React$Component) {
       });
     };
 
+    _this.onClick_next = function (e) {
+      e.preventDefault();
+      var index = _this.state.active_index + 1 >= _this.state.slides_length ? 0 : _this.state.active_index + 1;
+      _this.setState({
+        active_index: index
+      });
+    };
+
+    _this.onClick_prev = function (e) {
+      e.preventDefault();
+      var index = _this.state.active_index - 1 > 0 ? _this.state.active_index - 1 : 0;
+      _this.setState({
+        active_index: index
+      });
+    };
+
     _this.create_next_buttons = function () {
       if (_this.state.slides && _this.state.slides.length > 1) {
         return React.createElement(
@@ -41,7 +65,8 @@ var ImgCarousel = function (_React$Component) {
           null,
           React.createElement(
             "a",
-            { "class": "carousel-control-prev", href: "#page-carousel", role: "button", "data-slide": "prev" },
+            { "class": "carousel-control-prev", href: "#page-carousel", role: "button",
+              "data-slide": "prev", onClick: _this.onClick_prev },
             React.createElement("span", { "class": "carousel-control-prev-icon", "aria-hidden": "true" }),
             React.createElement(
               "span",
@@ -51,7 +76,8 @@ var ImgCarousel = function (_React$Component) {
           ),
           React.createElement(
             "a",
-            { "class": "carousel-control-next", href: "#page-carousel", role: "button", "data-slide": "next" },
+            { "class": "carousel-control-next", href: "#page-carousel", role: "button",
+              "data-slide": "next", onClick: _this.onClick_next },
             React.createElement("span", { "class": "carousel-control-next-icon", "aria-hidden": "true" }),
             React.createElement(
               "span",
@@ -66,7 +92,9 @@ var ImgCarousel = function (_React$Component) {
     };
 
     _this.state = {
-      slides: _this.props.slides
+      slides: _this.props.slides,
+      active_index: 0,
+      slides_length: 0
     };
     return _this;
   }
@@ -74,9 +102,19 @@ var ImgCarousel = function (_React$Component) {
   _createClass(ImgCarousel, [{
     key: "change_slides",
     value: function change_slides(slides) {
-      this.setState({
-        slides: slides
-      });
+      if (slides && slides.length > 0) {
+        this.setState({
+          slides: slides,
+          active_indx: 0,
+          slides_length: slides.length
+        });
+      } else {
+        this.setState({
+          slides: [],
+          active_indx: 0,
+          slides_length: 0
+        });
+      }
     }
   }, {
     key: "render",

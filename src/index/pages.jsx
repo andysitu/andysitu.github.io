@@ -32,6 +32,26 @@ class AppPage extends React.Component {
 }
 
 var page_content = {
+  html_webpages_a: {
+    linkText: "HTML Webpages",
+    slides: [
+      {img_src: "images/html_webpages_a/menubar_a.png",},
+      {img_src: "images/html_webpages_a/rug_a.png",},
+      {img_src: "images/html_webpages_a/accordion_a.png",},
+      {img_src: "images/html_webpages_a/accordion_b.png",},      
+    ],
+    text: [
+      {heading: "HTML Webpages", 
+        body: [
+          `Create webpages via HTML, CSS, and JS.`
+        ]
+    },{heading: "Links",
+        body: [
+          <a href="https://github.com/rarafon/html_webpages" target="_blank">GitHub Repository URL</a>,
+          <a href="http://rarafon.github.io/html_webpages" target="_blank">Index Page with links</a>,
+      ]},
+    ],
+  },
   wmsserver_a: {
     linkText: "WMS Server",
     // slides: [{img_src: "images/webpage_a_1.png",}, ],
@@ -53,7 +73,9 @@ var page_content = {
           `It was a similar situation with Firestore or Firebase as well. Now I've 
           reverted back to MongoDB where the database server is running alongside 
           the web server. What this means is that development now revolves around 
-          Java and JavaScript for the backend and frontend.`
+          Java and JavaScript for the backend and frontend.`,
+          `After some research, I have also decided to use MySQL rather than MongoDb.
+          `
         ]
     },{heading: "Links",
         body: [

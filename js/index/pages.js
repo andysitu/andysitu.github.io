@@ -53,11 +53,27 @@ var AppPage = function (_React$Component) {
 }(React.Component);
 
 var page_content = {
+  html_webpages_a: {
+    linkText: "HTML Webpages",
+    slides: [{ img_src: "images/html_webpages_a/menubar_a.png" }, { img_src: "images/html_webpages_a/rug_a.png" }, { img_src: "images/html_webpages_a/accordion_a.png" }, { img_src: "images/html_webpages_a/accordion_b.png" }],
+    text: [{ heading: "HTML Webpages",
+      body: ["Create webpages via HTML, CSS, and JS."]
+    }, { heading: "Links",
+      body: [React.createElement(
+        "a",
+        { href: "https://github.com/rarafon/html_webpages", target: "_blank" },
+        "GitHub Repository URL"
+      ), React.createElement(
+        "a",
+        { href: "http://rarafon.github.io/html_webpages", target: "_blank" },
+        "Index Page with links"
+      )] }]
+  },
   wmsserver_a: {
     linkText: "WMS Server",
     // slides: [{img_src: "images/webpage_a_1.png",}, ],
     text: [{ heading: "WMS Server",
-      body: ["This is my attempt at a warehouse management system for a client. Initially, \n          I attempted to use the Google App Engine with Spring Boot, but it proved \n          difficult as I was running into errors on Google Cloud when running the app \n          engine but I was fine when I was running locally or manually on Google Cloud \n          using the ./mvnw spring-boot:run option there. Eventually I decided to use \n          Google Compute Engine instead, and I believe that this is the correct \n          choice.", "It's cheaper for one which is quite important and development is pretty \n          straightforward as VM servers are much easier to run. The benefits of \n          App Engine also lies in the ability to run multiple instances on demand, \n          but the demand of a WMS is pretty static meaning that there is a definite \n          maximum and minimum amount of users.", "It was a similar situation with Firestore or Firebase as well. Now I've \n          reverted back to MongoDB where the database server is running alongside \n          the web server. What this means is that development now revolves around \n          Java and JavaScript for the backend and frontend."]
+      body: ["This is my attempt at a warehouse management system for a client. Initially, \n          I attempted to use the Google App Engine with Spring Boot, but it proved \n          difficult as I was running into errors on Google Cloud when running the app \n          engine but I was fine when I was running locally or manually on Google Cloud \n          using the ./mvnw spring-boot:run option there. Eventually I decided to use \n          Google Compute Engine instead, and I believe that this is the correct \n          choice.", "It's cheaper for one which is quite important and development is pretty \n          straightforward as VM servers are much easier to run. The benefits of \n          App Engine also lies in the ability to run multiple instances on demand, \n          but the demand of a WMS is pretty static meaning that there is a definite \n          maximum and minimum amount of users.", "It was a similar situation with Firestore or Firebase as well. Now I've \n          reverted back to MongoDB where the database server is running alongside \n          the web server. What this means is that development now revolves around \n          Java and JavaScript for the backend and frontend.", "After some research, I have also decided to use MySQL rather than MongoDb.\n          "]
     }, { heading: "Links",
       body: [React.createElement(
         "a",
@@ -121,7 +137,7 @@ var page_content = {
     linkText: "Tracking Volunteers",
     slides: [{ img_src: "images/care_a/care_a_1.png" }, { img_src: "images/care_a/care_a_2.png" }, { img_src: "images/care_a/care_a_3.png" }],
     text: [{ heading: "Tracking Volunteers",
-      body: ["A volunteer tracking application running on Express and using Mongoose with\n          MongoDB on the local end, using JS and jQuery, and Bootstrap. In production,\n          it's running on AWS. We were in a team with independent responsibilities and\n          this is what I wrote.", "There was a deadline, but I could have spent more time working things out. It's\n          also because I am quite negative about the things that I have done, but I have\n          inspected it a few times so far and it's pretty good. One thing that I need to\n          improve on is the asyncrhonous calls which is how all the data is  loaded; there\n          might be delays in some calls in unexpected ways that I didn't take into account."]
+      body: ["A volunteer tracking application running on Express and using Mongoose with\n          MongoDB on the local end, using JS and jQuery, and Bootstrap. In production,\n          it's running on AWS. We were in a team with independent responsibilities and\n          this is what I wrote.", "One thing that I need to improve on is the asyncrhonous calls which is how all \n          the data is  loaded; there might be delays in some calls in unexpected ways \n          that I didn't take into account."]
     }, { heading: "Links",
       body: [React.createElement(
         "a",

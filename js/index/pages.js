@@ -53,6 +53,18 @@ var AppPage = function (_React$Component) {
 }(React.Component);
 
 var page_content = {
+  queue_to_do_a: {
+    linkText: "Queue To DO",
+    slides: [],
+    text: [{ heading: "Queue To Do",
+      body: ["Desktop app with Eletron, React, & Redux."]
+    }, { heading: "Links",
+      body: [React.createElement(
+        "a",
+        { href: "https://github.com/rarafon/queue-to-do", target: "_blank" },
+        "GitHub Repository URL"
+      )] }]
+  },
   html_webpages_a: {
     linkText: "HTML Webpages",
     slides: [{ img_src: "images/html_webpages_a/menubar_a.png" }, { img_src: "images/html_webpages_a/rug_a.png" }, { img_src: "images/html_webpages_a/accordion_a.png" }, { img_src: "images/html_webpages_a/accordion_b.png" }],

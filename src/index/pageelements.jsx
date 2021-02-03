@@ -6,6 +6,16 @@ class ImgCarousel extends React.Component {
       active_index: 0,
       slides_length: 0,
     }
+    this.timer_ms = 3000;
+  }
+
+  setTimer_next = () => {
+    this.onClick_next();
+    setTimeout(this.setTimer_next, this.timer_ms);
+  }
+
+  componentDidMount = () => {
+    setTimeout(this.setTimer_next, this.timer_ms);
   }
 
   change_slides(slides) {
@@ -55,7 +65,11 @@ class ImgCarousel extends React.Component {
   };
 
   onClick_next = (e) => {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
+    console.log("next");
+    
     let index = (this.state.active_index + 1 >= this.state.slides_length)
           ? 0 : this.state.active_index + 1;
     this.setState({

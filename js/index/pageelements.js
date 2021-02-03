@@ -14,6 +14,15 @@ var ImgCarousel = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (ImgCarousel.__proto__ || Object.getPrototypeOf(ImgCarousel)).call(this, props));
 
+    _this.setTimer_next = function () {
+      _this.onClick_next();
+      setTimeout(_this.setTimer_next, _this.timer_ms);
+    };
+
+    _this.componentDidMount = function () {
+      setTimeout(_this.setTimer_next, _this.timer_ms);
+    };
+
     _this.create_sides = function () {
       return _this.state.slides.map(function (slide, index) {
         if (index != _this.state.active_index) {
@@ -43,7 +52,11 @@ var ImgCarousel = function (_React$Component) {
     };
 
     _this.onClick_next = function (e) {
-      e.preventDefault();
+      if (e) {
+        e.preventDefault();
+      }
+      console.log("next");
+
       var index = _this.state.active_index + 1 >= _this.state.slides_length ? 0 : _this.state.active_index + 1;
       _this.setState({
         active_index: index
@@ -96,6 +109,7 @@ var ImgCarousel = function (_React$Component) {
       active_index: 0,
       slides_length: 0
     };
+    _this.timer_ms = 3000;
     return _this;
   }
 

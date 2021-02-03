@@ -62,9 +62,6 @@ class App extends React.Component {
 
 function loadReact() {
 	ReactDOM.render(<App ref={this.app_page} />, document.getElementById("content-wrapper"));
-	$(function() {
-		$('[data-toggle="tooltip"]').tooltip()
-	});
 }
 
 loadReact();

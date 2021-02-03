@@ -108,9 +108,6 @@ var App = function (_React$Component2) {
 
 function loadReact() {
 	ReactDOM.render(React.createElement(App, { ref: this.app_page }), document.getElementById("content-wrapper"));
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
 }
 
 loadReact();

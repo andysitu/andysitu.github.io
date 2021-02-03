@@ -54,7 +54,7 @@ var AppPage = function (_React$Component) {
 
 var page_content = {
   queue_to_do_a: {
-    linkText: "Queue To DO",
+    linkText: "Queue To Do",
     slides: [],
     text: [{ heading: "Queue To Do",
       body: ["Desktop app with Eletron, React, & Redux."]
@@ -67,7 +67,7 @@ var page_content = {
   },
   html_webpages_a: {
     linkText: "HTML Webpages",
-    slides: [{ img_src: "images/html_webpages_a/menubar_a.png" }, { img_src: "images/html_webpages_a/rug_a.png" }, { img_src: "images/html_webpages_a/accordion_a.png" }, { img_src: "images/html_webpages_a/accordion_b.png" }],
+    slides: [{ img_src: "images/html_webpages_a/webpages_a.png" }, { img_src: "images/html_webpages_a/menubar_a.png" }, { img_src: "images/html_webpages_a/rug_a.png" }, { img_src: "images/html_webpages_a/accordion_a.png" }, { img_src: "images/html_webpages_a/accordion_b.png" }],
     text: [{ heading: "HTML Webpages",
       body: ["Create webpages via HTML, CSS, and JS."]
     }, { heading: "Links",

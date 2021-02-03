@@ -33,7 +33,7 @@ class AppPage extends React.Component {
 
 var page_content = {
   queue_to_do_a: {
-    linkText: "Queue To DO",
+    linkText: "Queue To Do",
     slides: [],
     text: [
       {heading: "Queue To Do", 
@@ -49,6 +49,7 @@ var page_content = {
   html_webpages_a: {
     linkText: "HTML Webpages",
     slides: [
+      {img_src: "images/html_webpages_a/webpages_a.png",},
       {img_src: "images/html_webpages_a/menubar_a.png",},
       {img_src: "images/html_webpages_a/rug_a.png",},
       {img_src: "images/html_webpages_a/accordion_a.png",},

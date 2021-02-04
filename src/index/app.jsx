@@ -14,7 +14,7 @@ class LinksMenu extends React.Component {
 
 	render() {
 		return (
-			<div id="links-container" className="col-lg-4" style={this.props.menu_style}>
+			<div id="links-container" style={this.props.menu_style}>
 				<h1>Record 
 					<a  href="#" data-toggle="tooltip" data-placement="bottom"
 						title={`This is a record and reminder of what I have done and of how fun it is to make things.`}>[#?]</a></h1>

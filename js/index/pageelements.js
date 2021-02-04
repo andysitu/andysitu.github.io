@@ -29,13 +29,13 @@ var ImgCarousel = function (_React$Component) {
           return React.createElement(
             "div",
             { className: "carousel-item" },
-            React.createElement("img", { className: "page-carousel-images d-block", src: slide.img_src })
+            React.createElement("img", { className: "page-carousel-images", src: slide.img_src })
           );
         } else {
           return React.createElement(
             "div",
             { className: "carousel-item active" },
-            React.createElement("img", { className: "page-carousel-images d-block", src: slide.img_src })
+            React.createElement("img", { className: "page-carousel-images", src: slide.img_src })
           );
         }
       });

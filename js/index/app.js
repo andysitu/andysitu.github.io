@@ -33,7 +33,7 @@ var LinksMenu = function (_React$Component) {
 
 			return React.createElement(
 				"div",
-				{ id: "links-container", className: "col-lg-4", style: this.props.menu_style },
+				{ id: "links-container", style: this.props.menu_style },
 				React.createElement(
 					"h1",
 					null,

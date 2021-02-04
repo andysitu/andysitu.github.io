@@ -24,7 +24,7 @@ class AppPage extends React.Component {
 
   render() {
     return (
-    <div id="show-content-container" className="col-lg-8" style={this.props.menu_style}>
+    <div id="show-content-container" style={this.props.menu_style}>
       <ImgCarousel ref={this.img_carousel} slides={[]} />
       <TextContent ref={this.text_content} text={[]}/>
     </div>)

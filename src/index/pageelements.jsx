@@ -40,13 +40,13 @@ class ImgCarousel extends React.Component {
       if (index != this.state.active_index) {
         return (
           <div className="carousel-item">
-            <img className="page-carousel-images d-block" src={slide.img_src} />
+            <img className="page-carousel-images" src={slide.img_src} />
           </div>
         );
       } else {
         return (
           <div className="carousel-item active">
-            <img className="page-carousel-images d-block" src={slide.img_src} />
+            <img className="page-carousel-images" src={slide.img_src} />
           </div>
         );
       }

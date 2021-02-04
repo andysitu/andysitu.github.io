@@ -42,7 +42,7 @@ var AppPage = function (_React$Component) {
     value: function render() {
       return React.createElement(
         "div",
-        { id: "show-content-container", className: "col-lg-8", style: this.props.menu_style },
+        { id: "show-content-container", style: this.props.menu_style },
         React.createElement(ImgCarousel, { ref: this.img_carousel, slides: [] }),
         React.createElement(TextContent, { ref: this.text_content, text: [] })
       );

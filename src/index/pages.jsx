@@ -50,10 +50,11 @@ var page_content = {
     linkText: "HTML Webpages",
     slides: [
       {img_src: "images/html_webpages_a/webpages_a.png",},
+      {img_src: "images/html_webpages_a/recursively_hidden_notes_a.png",},
       {img_src: "images/html_webpages_a/menubar_a.png",},
       {img_src: "images/html_webpages_a/rug_a.png",},
       {img_src: "images/html_webpages_a/accordion_a.png",},
-      {img_src: "images/html_webpages_a/accordion_b.png",},      
+      {img_src: "images/html_webpages_a/accordion_b.png",},
     ],
     text: [
       {heading: "HTML Webpages", 

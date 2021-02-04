@@ -109,7 +109,7 @@ var ImgCarousel = function (_React$Component) {
       active_index: 0,
       slides_length: 0
     };
-    _this.timer_ms = 3000;
+    _this.timer_ms = 4000;
     return _this;
   }
 

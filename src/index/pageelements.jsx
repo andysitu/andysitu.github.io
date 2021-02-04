@@ -6,7 +6,7 @@ class ImgCarousel extends React.Component {
       active_index: 0,
       slides_length: 0,
     }
-    this.timer_ms = 3000;
+    this.timer_ms = 4000;
   }
 
   setTimer_next = () => {

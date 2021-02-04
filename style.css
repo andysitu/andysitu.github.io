@@ -1,5 +1,5 @@
 document, body {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Merriweather', serif;
 }
 
 body {
@@ -27,7 +27,7 @@ div#textContent-div {
 }
 
 #show-content-container {
-	width: 70%;
+	width: 65%;
 }
 
 #links-container,

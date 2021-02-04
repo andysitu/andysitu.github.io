@@ -55,7 +55,6 @@ var ImgCarousel = function (_React$Component) {
       if (e) {
         e.preventDefault();
       }
-      console.log("next");
 
       var index = _this.state.active_index + 1 >= _this.state.slides_length ? 0 : _this.state.active_index + 1;
       _this.setState({

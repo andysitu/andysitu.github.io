@@ -24,7 +24,7 @@ class LinksMenu extends React.Component {
 							<li>
 								<a href="#" type_ref={linkArray.type_ref} 
 									onClick={this.props.show_page}>
-										<div>{linkArray.linkText}</div></a>
+										<div type_ref={linkArray.type_ref}>{linkArray.linkText}</div></a>
 							</li>
 						);
 					})}

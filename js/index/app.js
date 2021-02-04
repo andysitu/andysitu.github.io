@@ -58,7 +58,7 @@ var LinksMenu = function (_React$Component) {
 									onClick: _this2.props.show_page },
 								React.createElement(
 									"div",
-									null,
+									{ type_ref: linkArray.type_ref },
 									linkArray.linkText
 								)
 							)

@@ -68,7 +68,6 @@ class ImgCarousel extends React.Component {
     if (e) {
       e.preventDefault();
     }
-    console.log("next");
     
     let index = (this.state.active_index + 1 >= this.state.slides_length)
           ? 0 : this.state.active_index + 1;

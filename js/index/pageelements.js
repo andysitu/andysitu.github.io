@@ -118,13 +118,13 @@ var ImgCarousel = function (_React$Component) {
       if (slides && slides.length > 0) {
         this.setState({
           slides: slides,
-          active_indx: 0,
+          active_index: 0,
           slides_length: slides.length
         });
       } else {
         this.setState({
           slides: [],
-          active_indx: 0,
+          active_index: 0,
           slides_length: 0
         });
       }

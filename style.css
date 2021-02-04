@@ -1,5 +1,13 @@
+document, body {
+	font-family: 'Poppins', sans-serif;
+}
+
 body {
 	margin: 0;
+}
+
+ul#links {
+	padding-left: 10px;
 }
 
 #content-container {
@@ -14,12 +22,8 @@ div#textContent-div {
 	font-size: 2.0rem;
 }
 
-/* #body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}*/
-
 #links-container {
-	width: 30%;
+	width: 35%;
 }
 
 #show-content-container {

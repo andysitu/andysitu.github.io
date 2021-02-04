@@ -17,13 +17,14 @@ class LinksMenu extends React.Component {
 			<div id="links-container" className="col-lg-4" style={this.props.menu_style}>
 				<h1>Record 
 					<a  href="#" data-toggle="tooltip" data-placement="bottom"
-						title={`This is a record and reminder of what I have done as I like
-							trivialize everything that I have done and of how fun it is to make things.`}>[#?]</a></h1>
+						title={`This is a record and reminder of what I have done and of how fun it is to make things.`}>[#?]</a></h1>
 				<ul id="links">
 					{this.state.links.map((linkArray) => {
 						return (
 							<li>
-								<a href="#" type_ref={linkArray.type_ref} onClick={this.props.show_page}>{linkArray.linkText}</a>
+								<a href="#" type_ref={linkArray.type_ref} 
+									onClick={this.props.show_page}>
+										<div>{linkArray.linkText}</div></a>
 							</li>
 						);
 					})}

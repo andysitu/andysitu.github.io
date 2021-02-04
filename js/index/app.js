@@ -41,7 +41,7 @@ var LinksMenu = function (_React$Component) {
 					React.createElement(
 						"a",
 						{ href: "#", "data-toggle": "tooltip", "data-placement": "bottom",
-							title: "This is a record and reminder of what I have done as I like\n\t\t\t\t\t\t\ttrivialize everything that I have done and of how fun it is to make things." },
+							title: "This is a record and reminder of what I have done and of how fun it is to make things." },
 						"[#?]"
 					)
 				),
@@ -54,8 +54,13 @@ var LinksMenu = function (_React$Component) {
 							null,
 							React.createElement(
 								"a",
-								{ href: "#", type_ref: linkArray.type_ref, onClick: _this2.props.show_page },
-								linkArray.linkText
+								{ href: "#", type_ref: linkArray.type_ref,
+									onClick: _this2.props.show_page },
+								React.createElement(
+									"div",
+									null,
+									linkArray.linkText
+								)
 							)
 						);
 					})
